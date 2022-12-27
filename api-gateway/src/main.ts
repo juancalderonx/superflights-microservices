@@ -5,8 +5,12 @@ import { TimeOutInterceptor } from './common/interceptors/timeout.interceptor';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+
   app.useGlobalFilters(new AllExceptionFilter());
   app.useGlobalInterceptors(new TimeOutInterceptor());
+  
+  app.setGlobalPrefix('api/v1');
+
   await app.listen(process.env.PORT || 3000);
 }
 bootstrap();

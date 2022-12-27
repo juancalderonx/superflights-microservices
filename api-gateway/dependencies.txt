@@ -1,1 +1,8 @@
 yarn add @nestjs/config
+yarn add amqplib
+yarn add amqp-connection-manager
+yarn add class-validator
+yarn add class-transformer
+yarn add @nestjs/microservices
+yarn add @nestjs/mapped-types
+yarn add @nestjs/swagger
